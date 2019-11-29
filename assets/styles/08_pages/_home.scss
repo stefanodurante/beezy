@@ -1,3 +1,14 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // --
+body {
+  background: rgb(20, 45, 76);
+
+  background: linear-gradient(323deg,
+    #62a7ff 0%,
+    #435ab6 46.381%,
+    #435ab6 46.381%,
+    #3f51ad 51.72%,
+    #142d4c 100%
+  );
+}
