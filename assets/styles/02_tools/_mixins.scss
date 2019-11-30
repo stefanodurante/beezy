@@ -19,12 +19,12 @@ BREAKPOINTS
         }
     }
     @if $point==desktop--lg {
-        @media screen and (min-width: 1280px) {
+        @media screen and (min-width: 1140px) {
             @content;
         }
     }
     @if $point==desktop {
-        @media screen and (min-width: 1025px) {
+        @media screen and (min-width: 1024px) {
             @content;
         }
     }

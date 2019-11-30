@@ -6,11 +6,14 @@
     @include align-items(center);
     @include justify-content(center);
     @include font-bold();
+    @include font-size(1.4);
     background: $tomato;
     border: none;
     color: $white;
-    font-size: 14px;
     letter-spacing: 2.8px;
     height: 45px;
     padding: 0 22px;
+    @include breakpoint(desktop) {
+        height: 55px;
+    }
 }
