@@ -10,13 +10,16 @@ body {
     background: linear-gradient(323deg, #62a7ff -7%, #435ab6 11.381%, #435ab6 19.381%, #3f51ad 28.72%, #142d4c 100%);
     height: 100vh;
     padding: 40px 20px 58px;
-    @include breakpoint(desktop) {
-        padding: 0;
-        height: 759px;
-        position: relative;
+    @include breakpoint(tablet) {
+        padding: 80px 20px 0;
     }
     @include breakpoint(desktop) {
         padding: 0 20px;
+        height: 620px;
+        position: relative;
+    }
+    @include breakpoint(desktop--lg) {
+        height: 759px;
     }
 }
 
@@ -55,8 +58,14 @@ body {
 
 .c-header {
     margin-bottom: 26px;
-    @include breakpoint(desktop) {}
-    @include breakpoint(desktop--lg) {}
+    @include breakpoint(tablet) {
+        margin-left: 20px;
+        margin-bottom: 40px;
+    }
+    @include breakpoint(desktop) {
+        margin-left: 0;
+        margin-bottom: 30px;
+    }
 }
 
 .c-logo {
@@ -64,7 +73,7 @@ body {
     text-align: center;
     margin: 0 auto;
     width: 132px;
-    @include breakpoint(desktop) {
+    @include breakpoint(tablet) {
         margin: 0;
     }
 }
@@ -75,20 +84,25 @@ body {
 }
 
 .c-section {
+    margin: auto;
     @include breakpoint(desktop) {
         @include flexbox();
         @include align-items(center);
         @include justify-content(center);
         position: relative;
     }
-    @include breakpoint(desktop--lg--max) {
-        max-width: 1600px;
+    @include breakpoint(desktop--lg) {
+        max-width: 1200px;
     }
 }
 
 .c-article__picture {
     margin-bottom: 23px;
+    @include breakpoint(tablet) {
+        margin-bottom: 0;
+    }
     @include breakpoint(desktop) {
+        margin-bottom: 23px;
         width: 30%;
     }
     @include breakpoint(desktop--lg) {
