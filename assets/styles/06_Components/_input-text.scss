@@ -1,1 +1,9 @@
-.c-input-text {}
+.c-input-text {
+    @include font-light();
+    color: $cool-grey;
+    font-size: 16px;
+    border: none;
+    height: 45px;
+    padding-left: 11px;
+    width: 100%;
+}

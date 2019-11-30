@@ -1,0 +1,6 @@
+.hidden-mobile {
+    display: none;
+    @include breakpoint(tablet) {
+        display: block;
+    }
+}

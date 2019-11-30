@@ -1,20 +1,25 @@
 /**
  * Basic typography style for copy text
  */
+
 body {
-  @include font-regular();
-  font-style: normal;
-  font-weight: 400;
-  
+    @include font-light();
+    font-style: normal;
+    font-weight: 400;
 }
 
-a{
-	color: $a-color;
+a {
+    color: $a-color;
 }
-h1, h2, h3, h4, h5, h6{
 
-  font-style: normal;
-  font-weight: 700;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-style: normal;
+    font-weight: 700;
 }
 
 dd {

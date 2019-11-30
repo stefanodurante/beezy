@@ -1,4 +1,18 @@
 /* esto s son los buenos */
+/*
+Author     : stefano
+Description: Purpose of the stylesheet follows.
+*/
+/*********************
+BREAKPOINTS
+*********************/
+/*********************
+TYPOGRAPHY
+*********************/
+/*********************
+BOX-MODEL
+*********************/
+/* Borders */
 /**
  * ---------------------------------------------------
  * 	Table of contents
@@ -35,7 +49,14 @@
  * Set up a decent box model on the root element
  */
 html {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 /**
@@ -44,8 +65,29 @@ html {
  * making all elements inheriting from the root box-sizing value
  * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
  */
-*, *::before, *::after {
-  box-sizing: inherit;
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: subpixel-antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Basic styles for headings
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
 /**
@@ -55,38 +97,58 @@ a {
   text-decoration: none;
 }
 
+/**
+ * Basic styles for forms
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Basic styles for images
+ */
 img {
   max-width: 100%;
-  margin: 8px 0;
+}
+
+/**
+ * Basic styles for images
+ */
+picture {
+  display: block;
+}
+
+/**
+ * Basic styles for list
+ */
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /* --------------------- 3.2 Fonts --------------------- */
 @font-face {
-  font-family: "segoe";
-  src: url("assets/fonts/Segoe/Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'segoe-bold';
+  src: url("./../fonts/bold-webfont.woff2") format("woff2"), url("./../fonts/bold-webfont.woff") format("woff");
 }
+
 @font-face {
-  font-family: "segoe-light";
-  src: url("assets/fonts/Segoe/Light.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'segoe-light';
+  src: url("./../fonts/light-webfont.woff2") format("woff2"), url("./../fonts/light-webfont.woff") format("woff");
 }
-@font-face {
-  font-family: "segoe-bold";
-  src: url("assets/fonts/Segoe/Bold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+
 /* --------------------- 3.3 Typography --------------------- */
 /**
  * Basic typography style for copy text
  */
 body {
-  font-family: "segoe", sans-serif;
+  font-family: 'segoe-light';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   font-weight: 400;
 }
@@ -95,7 +157,12 @@ a {
   color: #337ab7;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-style: normal;
   font-weight: 700;
 }
@@ -105,6 +172,16 @@ dd {
 }
 
 /* --------------------- 3.4 Helpers --------------------- */
+.hidden-mobile {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hidden-mobile {
+    display: block;
+  }
+}
+
 /**
  * ---------------------------------------------------
  * 	4. Elements
@@ -112,7 +189,27 @@ dd {
  */
 /* --------------------- 4.1 Header --------------------- */
 /* --------------------- 4.2 headings --------------------- */
+.c-h2 {
+  font-family: 'segoe-light';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.17;
+  color: #fff;
+  margin-bottom: 9px;
+}
+
 /* --------------------- 4.3 parags (texts, notes, messages) --------------------- */
+.c-parag {
+  font-family: 'segoe-light';
+  font-style: normal;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 26px;
+}
+
 /* --------------------- 4.4 Footer --------------------- */
 /**
  * ---------------------------------------------------
@@ -125,7 +222,44 @@ dd {
  * ---------------------------------------------------
  */
 /* --------------------- 6.1 Buttons --------------------- */
+.c-button {
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  font-family: 'segoe-bold';
+  font-style: normal;
+  font-weight: 500;
+  background: #f05638;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 2.8px;
+  height: 45px;
+  padding: 0 22px;
+}
+
 /* --------------------- 6.2 Inputs --------------------- */
+.c-input-text {
+  font-family: 'segoe-light';
+  font-style: normal;
+  font-weight: 300;
+  color: #9fa3a7;
+  font-size: 16px;
+  border: none;
+  height: 45px;
+  padding-left: 11px;
+  width: 100%;
+}
+
 /**
  * ---------------------------------------------------
  * 	7.  Utilities
@@ -138,8 +272,48 @@ dd {
  */
 /* --------------------- 8.1 Home Page Contoso --------------------- */
 body {
-  background: #142d4c;
-  background: linear-gradient(323deg, #62a7ff 0%, #435ab6 46.381%, #435ab6 46.381%, #3f51ad 51.72%, #142d4c 100%);
+  text-align: center;
 }
 
+.c-main {
+  background: #142d4c;
+  background: linear-gradient(323deg, #62a7ff -7%, #435ab6 11.381%, #435ab6 19.381%, #3f51ad 28.72%, #142d4c 100%);
+  height: 100vh;
+  padding: 40px 20px 58px;
+}
+
+.c-header {
+  margin-bottom: 26px;
+}
+
+.c-logo {
+  height: 42px;
+  text-align: center;
+  margin: 0 auto;
+  width: 132px;
+}
+
+.c-logo__svg {
+  width: 100%;
+  height: 100%;
+}
+
+.c-picture {
+  margin-bottom: 23px;
+}
+
+.c-cta {
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c-input-text {
+  border-radius: 8px 0 0 8px;
+}
+
+.c-button {
+  border-radius: 0 8px 8px 0;
+}
 /*# sourceMappingURL=style.css.map */
