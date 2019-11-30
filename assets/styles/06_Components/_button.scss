@@ -1,0 +1,16 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.c-button {
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+    @include font-bold();
+    background: $tomato;
+    border: none;
+    color: $white;
+    font-size: 14px;
+    letter-spacing: 2.8px;
+    height: 45px;
+    padding: 0 22px;
+}

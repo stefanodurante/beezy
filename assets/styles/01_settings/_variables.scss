@@ -1,0 +1,24 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+// Base colors
+$body-color: #333;
+$p-color: #333; // <p> tag color
+$h-color: #111; // headings color
+$a-color: #337ab7; // links color
+
+/* esto s son los buenos */
+
+$cool-grey:#9fa3a7;
+$white:#fff; // text
+$white--87:rgba(255, 255, 255, 0.7); // secondary text
+$tomato:#f05638; // button
+//$color-scheme: @@@@
+// Font sizes
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$assets-dir: 'assets/' !default;
+$images-dir: 'assets/images/' !default;
+$plugins-dir: 'assets/images/' !default;

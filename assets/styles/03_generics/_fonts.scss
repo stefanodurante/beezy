@@ -1,0 +1,24 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+@font-face {
+    font-family: 'segoe-bold';
+    src: url('./../fonts/bold-webfont.woff2') format('woff2'), url('./../fonts/bold-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'segoe-light';
+    src: url('./../fonts/light-webfont.woff2') format('woff2'), url('./../fonts/light-webfont.woff') format('woff');
+}
+
+@mixin font-light {
+    font-family: 'segoe-light';
+    font-style: normal;
+    font-weight: 300;
+}
+
+@mixin font-bold {
+    font-family: 'segoe-bold';
+    font-style: normal;
+    font-weight: 500;
+}

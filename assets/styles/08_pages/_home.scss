@@ -1,0 +1,45 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// --
+body {
+    text-align: center;
+}
+
+.c-main {
+    background: rgb(20, 45, 76);
+    background: linear-gradient(323deg, #62a7ff -7%, #435ab6 11.381%, #435ab6 19.381%, #3f51ad 28.72%, #142d4c 100%);
+    height: 100vh;
+    padding: 40px 20px 58px;
+}
+
+.c-header {
+    margin-bottom: 26px;
+}
+
+.c-logo {
+    height: 42px;
+    text-align: center;
+    margin: 0 auto;
+    width: 132px;
+}
+
+.c-logo__svg {
+    width: 100%;
+    height: 100%;
+}
+
+.c-picture {
+    margin-bottom: 23px;
+}
+
+.c-cta {
+    @include flexbox();
+}
+
+.c-input-text {
+    border-radius: 8px 0 0 8px;
+}
+
+.c-button {
+    border-radius: 0 8px 8px 0;
+}
