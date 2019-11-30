@@ -13,4 +13,7 @@
     letter-spacing: 2.8px;
     height: 45px;
     padding: 0 22px;
+    @include breakpoint(desktop) {
+        height: 55px;
+    }
 }

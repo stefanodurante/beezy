@@ -1,6 +1,8 @@
 .c-article {
     @include breakpoint(desktop) {
         @include flexbox();
+        @include justify-content(space-between);
+        width: 100%;
     }
 }
 
@@ -8,5 +10,6 @@
     @include breakpoint(desktop) {
         text-align: left;
         max-width: 600px;
+        margin-top: 165px;
     }
 }

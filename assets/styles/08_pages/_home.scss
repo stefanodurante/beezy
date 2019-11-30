@@ -10,10 +10,53 @@ body {
     background: linear-gradient(323deg, #62a7ff -7%, #435ab6 11.381%, #435ab6 19.381%, #3f51ad 28.72%, #142d4c 100%);
     height: 100vh;
     padding: 40px 20px 58px;
+    @include breakpoint(desktop) {
+        padding: 0;
+        height: 759px;
+        position: relative;
+    }
+    @include breakpoint(desktop) {
+        padding: 0 20px;
+    }
+}
+
+.c-social-nav {
+    display: none;
+    @include breakpoint(desktop) {
+        @include flexbox();
+        @include justify-content(flex-end);
+    }
+}
+
+.c-social-nav__list {
+    @include breakpoint(desktop) {
+        @include flexbox();
+        @include justify-content(flex-end);
+        margin-top: 40px;
+        margin-right: 40px;
+    }
+}
+
+.c-social-nav__item {
+    height: 32px;
+    width: 32px;
+    &:first-of-type {
+        margin-right: 10px;
+    }
+}
+
+.c-social-nav__link {
+    @include breakpoint(desktop) {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+    }
 }
 
 .c-header {
     margin-bottom: 26px;
+    @include breakpoint(desktop) {}
+    @include breakpoint(desktop--lg) {}
 }
 
 .c-logo {
@@ -21,6 +64,9 @@ body {
     text-align: center;
     margin: 0 auto;
     width: 132px;
+    @include breakpoint(desktop) {
+        margin: 0;
+    }
 }
 
 .c-logo__svg {
@@ -33,21 +79,37 @@ body {
         @include flexbox();
         @include align-items(center);
         @include justify-content(center);
+        position: relative;
+    }
+    @include breakpoint(desktop--lg--max) {
+        max-width: 1600px;
+    }
+}
+
+.c-article__picture {
+    margin-bottom: 23px;
+    @include breakpoint(desktop) {
+        width: 30%;
+    }
+    @include breakpoint(desktop--lg) {
+        width: 374px;
+        height: 732px;
     }
 }
 
 .c-picture {
-    margin-bottom: 23px;
     @include breakpoint(desktop) {
-        width: 374px;
-        height: 732px;
-        margin-right: 167px;
+        width: 100%;
+        height: 100%;
         object-fit: contain;
     }
 }
 
 .c-cta {
     @include flexbox();
+    @include breakpoint(desktop) {
+        max-width: 420px;
+    }
 }
 
 .c-input-text {

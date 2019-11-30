@@ -6,5 +6,6 @@
     margin: 0 0 26px;
     @include breakpoint(desktop) {
         font-size: 24px;
+        margin-bottom: 48px;
     }
 }
