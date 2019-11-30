@@ -28,8 +28,22 @@ body {
     height: 100%;
 }
 
+.c-section {
+    @include breakpoint(desktop) {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+    }
+}
+
 .c-picture {
     margin-bottom: 23px;
+    @include breakpoint(desktop) {
+        width: 374px;
+        height: 732px;
+        margin-right: 167px;
+        object-fit: contain;
+    }
 }
 
 .c-cta {

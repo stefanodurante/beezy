@@ -172,12 +172,32 @@ dd {
 }
 
 /* --------------------- 3.4 Helpers --------------------- */
-.hidden-mobile {
-  display: none;
+.show--mobile {
+  display: block;
 }
 
 @media (min-width: 768px) {
-  .hidden-mobile {
+  .show--mobile {
+    display: none;
+  }
+}
+
+.show--tablet {
+  display: block;
+}
+
+@media screen and (min-width: 1025px) {
+  .show--tablet {
+    display: none;
+  }
+}
+
+.show--desktop {
+  display: none;
+}
+
+@media screen and (min-width: 1025px) {
+  .show--desktop {
     display: block;
   }
 }
@@ -199,6 +219,12 @@ dd {
   margin-bottom: 9px;
 }
 
+@media screen and (min-width: 1025px) {
+  .c-h2 {
+    font-size: 48px;
+  }
+}
+
 /* --------------------- 4.3 parags (texts, notes, messages) --------------------- */
 .c-parag {
   font-family: 'segoe-light';
@@ -208,6 +234,12 @@ dd {
   font-size: 16px;
   line-height: 1.5;
   margin: 0 0 26px;
+}
+
+@media screen and (min-width: 1025px) {
+  .c-parag {
+    font-size: 24px;
+  }
 }
 
 /* --------------------- 4.4 Footer --------------------- */
@@ -260,6 +292,23 @@ dd {
   width: 100%;
 }
 
+/* --------------------- 6.3 Article --------------------- */
+@media screen and (min-width: 1025px) {
+  .c-article {
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .c-article__content {
+    text-align: left;
+    max-width: 600px;
+  }
+}
+
 /**
  * ---------------------------------------------------
  * 	7.  Utilities
@@ -298,8 +347,35 @@ body {
   height: 100%;
 }
 
+@media screen and (min-width: 1025px) {
+  .c-section {
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -moz-justify-content: center;
+    justify-content: center;
+  }
+}
+
 .c-picture {
   margin-bottom: 23px;
+}
+
+@media screen and (min-width: 1025px) {
+  .c-picture {
+    width: 374px;
+    height: 732px;
+    margin-right: 167px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
 }
 
 .c-cta {

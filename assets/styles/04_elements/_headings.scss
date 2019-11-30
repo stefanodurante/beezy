@@ -4,4 +4,7 @@
     line-height: 1.17;
     color: $white;
     margin-bottom: 9px;
+    @include breakpoint(desktop) {
+        font-size: 48px
+    }
 }

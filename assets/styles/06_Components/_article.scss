@@ -1,0 +1,12 @@
+.c-article {
+    @include breakpoint(desktop) {
+        @include flexbox();
+    }
+}
+
+.c-article__content {
+    @include breakpoint(desktop) {
+        text-align: left;
+        max-width: 600px;
+    }
+}
