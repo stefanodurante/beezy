@@ -10,6 +10,9 @@
         @include align-items(flex-start);
         @include justify-content(flex-start);
     }
+    @include breakpoint(desktop--lg) {
+        @include justify-content(space-between);
+    }
 }
 
 .c-article__content {
@@ -18,12 +21,11 @@
         max-width: 360px;
     }
     @include breakpoint(desktop) {
-        max-width: 600px;
+        max-width: 584px;
         margin-top: 92px;
         margin-left: 95px;
     }
     @include breakpoint(desktop--lg) {
         margin-top: 100px;
-        margin-left: 167px;
     }
 }

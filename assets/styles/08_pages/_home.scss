@@ -7,7 +7,7 @@ body {
 
 .c-main {
     background: rgb(20, 45, 76);
-    background: linear-gradient(323deg, #62a7ff -7%, #435ab6 11.381%, #435ab6 19.381%, #3f51ad 28.72%, #142d4c 100%);
+    background-image: linear-gradient(323deg, #62a7ff -7%, #435ab6 11.381%, #435ab6 19.381%, #3f51ad 28.72%, #142d4c 100%);
     height: 100vh;
     padding: 40px 20px 58px;
     @include breakpoint(tablet) {
@@ -17,9 +17,12 @@ body {
         padding: 0 20px;
         height: 620px;
         position: relative;
+        background: rgb(20, 45, 76);
+        background-image: linear-gradient(323deg, #62a7ff -10%, #435ab6 1.381%, #435ab6 20.381%, #3f51ad 28.72%, #142d4c 100%);
     }
     @include breakpoint(desktop--lg) {
         height: 759px;
+        padding: 0;
     }
 }
 
@@ -68,21 +71,6 @@ body {
     }
 }
 
-.c-logo {
-    height: 42px;
-    text-align: center;
-    margin: 0 auto;
-    width: 132px;
-    @include breakpoint(tablet) {
-        margin: 0;
-    }
-}
-
-.c-logo__svg {
-    width: 100%;
-    height: 100%;
-}
-
 .c-section {
     margin: auto;
     @include breakpoint(desktop) {
@@ -117,6 +105,9 @@ body {
         height: 100%;
         object-fit: contain;
     }
+    @include breakpoint(desktop--lg) {
+        margin-left: 70px;
+    }
 }
 
 .c-cta {
@@ -132,4 +123,19 @@ body {
 
 .c-button {
     border-radius: 0 8px 8px 0;
+}
+
+@media all and (-ms-high-contrast:none) {
+    body {
+        overflow-x: hidden;
+        ;
+    }
+    .c-main {
+        display: block;
+        ;
+    }
+    .c-button {
+        width: auto;
+        min-width: 92px;
+    }
 }
