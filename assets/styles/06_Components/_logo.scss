@@ -1,0 +1,11 @@
+.c-logo {
+    background-image: url('./../images/contoso.svg');
+    background-size: cover;
+    height: 42px;
+    margin: 0 auto;
+    text-align: center;
+    width: 132px;
+    @include breakpoint(tablet) {
+        margin: 0;
+    }
+}
