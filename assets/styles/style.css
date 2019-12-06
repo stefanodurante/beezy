@@ -1,4 +1,3 @@
-/* esto s son los buenos */
 /*
 Author     : stefano
 Description: Purpose of the stylesheet follows.
@@ -23,17 +22,18 @@ BOX-MODEL
 		3.1 base
 		3.2 Fonts
 		3.3 Typography
-		3.4 Helpers
 	4. Elements
 		4.1 Header 
 		4.2 Headings
 		4.3 Parags
 		4.4 Footer
 	5. Objects
-		5.1 Buttons
+		-------------------
 	6. Components
-		6.1 Buttons
-		6.1 Forms elements
+		6.1 Logos
+		6.2 Buttons
+		6.3 Forms elements
+		6.4 Articles
 	7. Utilities
 		7.1 utilities
 
@@ -73,7 +73,8 @@ body {
 }
 
 body {
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
 }
@@ -153,10 +154,6 @@ body {
   font-weight: 400;
 }
 
-a {
-  color: #337ab7;
-}
-
 h1,
 h2,
 h3,
@@ -171,44 +168,12 @@ dd {
   margin-left: 25px;
 }
 
-/* --------------------- 3.4 Helpers --------------------- */
-.u-show--mobile {
-  display: block;
-}
-
-@media (min-width: 768px) {
-  .u-show--mobile {
-    display: none;
-  }
-}
-
-.u-show--tablet {
-  display: block;
-}
-
-@media screen and (min-width: 1024px) {
-  .u-show--tablet {
-    display: none;
-  }
-}
-
-.u-show--desktop {
-  display: none;
-}
-
-@media screen and (min-width: 1024px) {
-  .u-show--desktop {
-    display: block;
-  }
-}
-
 /**
  * ---------------------------------------------------
  * 	4. Elements
  * ---------------------------------------------------
  */
-/* --------------------- 4.1 Header --------------------- */
-/* --------------------- 4.2 headings --------------------- */
+/* --------------------- 4.1 headings --------------------- */
 .c-h2 {
   font-family: 'segoe-light';
   font-style: normal;
@@ -226,7 +191,7 @@ dd {
   }
 }
 
-/* --------------------- 4.3 parags (texts, notes, messages) --------------------- */
+/* --------------------- 4.2 parags (texts, notes, messages) --------------------- */
 .c-parag {
   font-family: 'segoe-light';
   font-style: normal;
@@ -244,7 +209,11 @@ dd {
   }
 }
 
-/* --------------------- 4.4 Footer --------------------- */
+/* --------------------- 4.3 Footer --------------------- */
+footer {
+  background: #fff;
+}
+
 /**
  * ---------------------------------------------------
  * 	5.  Objects
@@ -255,7 +224,23 @@ dd {
  * 	6.  Components
  * ---------------------------------------------------
  */
-/* --------------------- 6.1 Buttons --------------------- */
+/* --------------------- 6.1 Logo --------------------- */
+.c-logo {
+  background-image: url("./../images/contoso.svg");
+  background-size: cover;
+  height: 42px;
+  margin: 0 auto;
+  text-align: center;
+  width: 132px;
+}
+
+@media (min-width: 768px) {
+  .c-logo {
+    margin: 0;
+  }
+}
+
+/* --------------------- 6.2 Buttons --------------------- */
 .c-button {
   display: -webkit-box;
   display: -moz-flex;
@@ -279,6 +264,7 @@ dd {
   letter-spacing: 2.8px;
   height: 45px;
   padding: 0 22px;
+  outline: none;
 }
 
 @media screen and (min-width: 1024px) {
@@ -287,7 +273,7 @@ dd {
   }
 }
 
-/* --------------------- 6.2 Inputs --------------------- */
+/* --------------------- 6.3 Inputs --------------------- */
 .c-input-text {
   font-family: 'segoe-light';
   font-style: normal;
@@ -309,7 +295,7 @@ dd {
   }
 }
 
-/* --------------------- 6.3 Article --------------------- */
+/* --------------------- 6.4 Article --------------------- */
 @media (min-width: 768px) {
   .c-article {
     display: -webkit-box;
@@ -345,6 +331,15 @@ dd {
   }
 }
 
+@media screen and (min-width: 1140px) {
+  .c-article {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+  }
+}
+
 @media (min-width: 768px) {
   .c-article__content {
     text-align: left;
@@ -354,7 +349,7 @@ dd {
 
 @media screen and (min-width: 1024px) {
   .c-article__content {
-    max-width: 600px;
+    max-width: 584px;
     margin-top: 92px;
     margin-left: 95px;
   }
@@ -363,7 +358,6 @@ dd {
 @media screen and (min-width: 1140px) {
   .c-article__content {
     margin-top: 100px;
-    margin-left: 167px;
   }
 }
 
@@ -372,6 +366,36 @@ dd {
  * 	7.  Utilities
  * ---------------------------------------------------
  */
+.u-show--mobile {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .u-show--mobile {
+    display: none;
+  }
+}
+
+.u-show--tablet {
+  display: block;
+}
+
+@media screen and (min-width: 1024px) {
+  .u-show--tablet {
+    display: none;
+  }
+}
+
+.u-show--desktop {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .u-show--desktop {
+    display: block;
+  }
+}
+
 /**
  * ---------------------------------------------------
  * 	8.  Pages
@@ -384,7 +408,7 @@ body {
 
 .c-main {
   background: #142d4c;
-  background: linear-gradient(323deg, #62a7ff -7%, #435ab6 11.381%, #435ab6 19.381%, #3f51ad 28.72%, #142d4c 100%);
+  background-image: linear-gradient(323deg, #62a7ff -7%, #435ab6 11.381%, #435ab6 19.381%, #3f51ad 28.72%, #142d4c 100%);
   height: 100vh;
   padding: 40px 20px 58px;
 }
@@ -400,12 +424,15 @@ body {
     padding: 0 20px;
     height: 620px;
     position: relative;
+    background: #142d4c;
+    background-image: linear-gradient(323deg, #62a7ff -10%, #435ab6 1.381%, #435ab6 20.381%, #3f51ad 28.72%, #142d4c 100%);
   }
 }
 
 @media screen and (min-width: 1140px) {
   .c-main {
     height: 759px;
+    padding: 0;
   }
 }
 
@@ -485,24 +512,6 @@ body {
   }
 }
 
-.c-logo {
-  height: 42px;
-  text-align: center;
-  margin: 0 auto;
-  width: 132px;
-}
-
-@media (min-width: 768px) {
-  .c-logo {
-    margin: 0;
-  }
-}
-
-.c-logo__svg {
-  width: 100%;
-  height: 100%;
-}
-
 .c-section {
   margin: auto;
 }
@@ -564,6 +573,12 @@ body {
   }
 }
 
+@media screen and (min-width: 1140px) {
+  .c-picture {
+    margin-left: 70px;
+  }
+}
+
 .c-cta {
   display: -webkit-box;
   display: -moz-flex;
@@ -583,5 +598,18 @@ body {
 
 .c-button {
   border-radius: 0 8px 8px 0;
+}
+
+@media all and (-ms-high-contrast: none) {
+  body {
+    overflow-x: hidden;
+  }
+  .c-main {
+    display: block;
+  }
+  .c-button {
+    width: auto;
+    min-width: 92px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
